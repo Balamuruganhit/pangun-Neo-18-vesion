@@ -3,13 +3,14 @@ set -e
 
 SCRIPT_DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 OFBIZ_TARGET_DIR="$SCRIPT_DIR/../ofbiz/apache-ofbiz"
-SOURCES_ZIP_URL="https://dlcdn.apache.org/ofbiz/apache-ofbiz-18.12.06.zip"
-SOURCES_ZIP_FILE="$SCRIPT_DIR/../ofbiz/apache-ofbiz-18.12.06.zip"
+SOURCES_ZIP_URL="https://github.com/apache/ofbiz-framework/archive/refs/tags/release18.12.15.zip"
+SOURCES_ZIP_FILE="$SCRIPT_DIR/../ofbiz/release18.12.15.zip"
 
 if [ -d "$OFBIZ_TARGET_DIR" ]; then
     echo "OFBiz sources already exist. Skipping download: $OFBIZ_TARGET_DIR"
     exit
 fi
+
 
 if [ ! -f "$SOURCES_ZIP_FILE" ]; then
     echo "Downloading OFBiz sources from $SOURCES_ZIP_URL"
