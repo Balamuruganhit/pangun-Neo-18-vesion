@@ -4,7 +4,7 @@ ENV JAVA_OPTS -Xmx2G
 
 COPY /apache-ofbiz /ofbiz
 WORKDIR /ofbiz
-
+RUN chmod +x /ofbiz/gradle/init-gradle-wrapper.sh && /ofbiz/gradle/init-gradle-wrapper.sh
 RUN /ofbiz/gradle/init-gradle-wrapper.sh
 
 EXPOSE 8080
