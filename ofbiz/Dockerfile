@@ -10,7 +10,7 @@ RUN /ofbiz/gradle/init-gradle-wrapper.sh
 EXPOSE 8080
 EXPOSE 8443
 EXPOSE 8009
-
+RUN chmod +x gradlew
 RUN ./gradlew build
 
 # Configure entity engine to use the localpostgres datasource.
