@@ -9,6 +9,7 @@ services:
     restart: "no"
     environment:
       POSTGRES_PASSWORD: lDvEFVkVyVpHuCOK9To3
+      POSTGRES_MAX_CONNECTIONS : 250
     # ports:
     #   - 5432:5432
     volumes:
